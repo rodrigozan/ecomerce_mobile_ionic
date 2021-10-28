@@ -1,0 +1,41 @@
+<ion-header class="casal">
+  <img id="loginFacebook" src="assets/imgs/cadastro/login_facebook.png" (click)="loginFC()">
+</ion-header>
+
+<ion-content padding text-center>
+  <form class="formCadastro" [formGroup]="registerForm" (ngSubmit)="validaCadastro()" novalidate>
+    <ion-item class="iconesFom">
+      <ion-label>
+        <img src="assets/imgs/cadastro/icon_nome.png">
+      </ion-label>
+      <ion-input [(ngModel)]="nomeCompleto" formControlName="nomeCompleto" type="text" placeholder="Digite seu nome" clearInput clearOnEdit="false"></ion-input>
+    </ion-item>
+    <p *ngIf="errorNome" class="error"> {{ messageNome }}</p>
+    <ion-item class="iconesFom">
+      <ion-label>
+        <img src="assets/imgs/cadastro/icon_email.png">
+      </ion-label>
+      <ion-input [(ngModel)]="email" formControlName="email" type="text" placeholder="E-mail" clearInput clearOnEdit="false"></ion-input>
+    </ion-item>
+    <p *ngIf="errorEmail" class="error"> {{ messageEmail }}</p>
+    <ion-item class="iconesFom">
+      <ion-label>
+        <img src="assets/imgs/cadastro/icon_senha.png">
+      </ion-label>
+      <ion-input [(ngModel)]="password" formControlName="password" type="password" placeholder="Senha" clearInput clearOnEdit="false"></ion-input>
+    </ion-item>
+    <p *ngIf="errorPassword" class="error"> {{ messagePassword }}</p>
+    <ion-item class="iconesFom">
+      <ion-label>
+        <img src="assets/imgs/cadastro/icon_senha.png">
+      </ion-label>
+      <ion-input [(ngModel)]="confirmaPassword" formControlName="confirmaPassword" type="password" placeholder="Confirme a Senha" clearInput clearOnEdit="false"></ion-input>
+    </ion-item>
+    <p *ngIf="errorConfirma" class="error"> {{ messageConfirma }}</p>
+    <p *ngIf="errorSenhasIguais" class="error"> {{ messageSenhasIguais }}</p>
+    <button class="btCriarConta">
+      <img id="criarConta" src="assets/imgs/cadastro/btn_criar_conta.png">
+    </button>
+  </form>
+</ion-content>
+

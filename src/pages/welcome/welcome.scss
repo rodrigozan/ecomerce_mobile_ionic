@@ -1,0 +1,26 @@
+@import 'app/app.scss';
+page-welcome {
+    .welcome{
+        @include degrade(#6670fb, #2a34c7);
+        color: #ffffff;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    
+    .welcome h1{
+        margin-top: 30px !important;
+    }
+
+    .welcome img {
+        max-width: 200px;
+        margin-top: 50px;
+    }
+
+    .welcome #imgCadastro {
+        max-width: 250px;
+    }
+
+    .content {
+        margin-top:0px;
+    }
+}

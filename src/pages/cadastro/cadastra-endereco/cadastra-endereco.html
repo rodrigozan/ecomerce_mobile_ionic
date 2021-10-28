@@ -1,0 +1,71 @@
+<ion-header class="cadastra_endereco_header" text-center>
+  <h3>COMPLETE SEU ENDEREÇO</h3>
+</ion-header>
+ 
+<ion-content padding class="cadastra_endereco" text-center>
+   
+  <div class="busca">
+      <ion-label>
+          <img src="assets/imgs/cadastro/icon_cep.png">
+        </ion-label>
+    <ion-searchbar type="tel" [(ngModel)]="cep" (ionInput)="getEndereco()" placeholder="Digite seu cep"></ion-searchbar>
+  </div>
+  
+  <form class="formCadastro" (ngSubmit)="cadastraEndereco()" #formCadastro="ngForm">
+    <ion-item class="iconesForm">
+      <ion-label>
+        <img class="img-endereco" src="assets/imgs/cadastro/icon_localizacao.png">
+      </ion-label>
+      <ion-input placeholder="Endereço" [(ngModel)]="rua" name="rua"  type="text" required></ion-input>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-8>
+          <ion-item class="iconesForm">
+            <ion-input placeholder="Complemento" [(ngModel)]="complemento" name="complemento" type="text" required></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4>
+          <ion-item class="iconesForm">
+            <ion-input placeholder="Nº" [(ngModel)]="numero" name="numero" type="number" required></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-item class="iconesForm">
+      <ion-input placeholder="Bairro" [(ngModel)]="bairro" name="bairro" type="text" required></ion-input>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-9>
+          <ion-item class="iconesForm">
+            <ion-input placeholder="Cidade" [(ngModel)]="cidade" name="cidade" type="text" required></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3>
+          <ion-item class="iconesForm">
+            <ion-input placeholder="UF" [(ngModel)]="uf" name="uf" type="text" required></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 (click)="imgResidencialEhTrue()">
+            <img src="assets/imgs/cadastro/icon_residencial_cinza.png" *ngIf="!residencialTrue">
+            <img src="assets/imgs/cadastro/icon_residencial_azul.png" *ngIf="residencialTrue">
+          </ion-col>
+          <ion-col col-6 (click)="imgTrabalhoEhTrue()">
+            <img class="img-trabalho" src="assets/imgs/cadastro/icon_trabalho_cinza.png" *ngIf="!trabalhosTrue">
+            <img class="img-trabalho" src="assets/imgs/cadastro/icon_trabalho_azul.png" *ngIf="trabalhosTrue">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <button class="btCriarConta">
+        <img id="criarConta" src="assets/imgs/cadastro/btn_criar_conta.png">
+    </button>
+  </form>
+  <p class="escolha" (click)="concluiSemEndereco()">ESCOLHER DEPOIS</p>
+</ion-content>

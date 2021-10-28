@@ -1,0 +1,17 @@
+<ion-content 
+  padding 
+  class="welcome"
+  [ngClass]="{
+    'domingo': diaDaSemana == 0,
+    'segunda': diaDaSemana == 1,
+    'terca': diaDaSemana == 2,
+    'quarta': diaDaSemana == 3,
+    'quinta': diaDaSemana == 4,
+    'sexta': diaDaSemana == 5,
+    'sabado': diaDaSemana == 6
+  }"
+>
+  <img src="assets/imgs/logo.png" alt="simpls.me">
+  <p>"A day without laughter <br />is a day wasted."</p>
+  <p>by Charlie Chaplin</p>
+</ion-content>

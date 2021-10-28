@@ -1,0 +1,7 @@
+{
+  "name": "simpls-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

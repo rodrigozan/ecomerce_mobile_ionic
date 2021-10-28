@@ -1,0 +1,15 @@
+<!-- menu -->
+<ion-menu class="menu-lateral" [content]="content">
+
+  <ion-content>
+      <h3 text-center>Todas Categorias</h3>
+      <ion-list nolines>
+          <ion-item *ngFor="let pag of pages" no-lines>
+              {{pag.title}}  <ion-icon name="arrow-forward" item-end></ion-icon>
+          </ion-item>
+      </ion-list>
+  </ion-content>
+  
+  </ion-menu>
+  <!-- nav -->
+  <ion-nav id="nav" [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

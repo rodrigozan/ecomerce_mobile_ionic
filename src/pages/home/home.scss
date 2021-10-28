@@ -1,0 +1,46 @@
+@import 'app/app.scss';
+page-home {
+    .welcome{
+        color: #ffffff;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .domingo {
+        @include degrade(#f4b102, #e9e436);
+    }
+
+    .segunda {
+        @include degrade(#e3512d, #ed8d1d);
+    }
+
+    .terca {
+        @include degrade(#381f75, #7f2d88);
+    }
+
+    .quarta {
+        @include degrade(#2ea230, #b6cc20);
+    }
+
+    .quinta {
+        @include degrade(#1f448a, #0086be);
+    }
+
+    .sexta {
+        @include degrade(#b61849, #e13632);
+    }
+
+    .sabado {
+        @include degrade(#2eca31, #9aad1d);
+    }
+
+    .welcome img {
+        max-width: 150px;
+        margin-top:80px;
+        margin-bottom: 100px;
+    }
+
+    .content {
+        margin-top:0px;
+    }
+}

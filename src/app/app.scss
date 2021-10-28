@@ -1,0 +1,134 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+//Variaveis
+
+$color-white: #ffffff;
+
+//Mixins
+
+@mixin degrade($corSuperior, $corInferior) {
+    background: $corSuperior; 
+    background: -moz-linear-gradient(top, $corSuperior 0%, $corInferior 100%); 
+    background: -webkit-linear-gradient(top, $corSuperior 0%,$corInferior 100%); 
+    background: linear-gradient(to bottom, $corSuperior 0%,$corInferior 100%);
+}
+
+@mixin borderRadius($radius, $border){
+    border: $border;
+    -webkit-border-radius: $radius !important;
+    -moz-border-radius: $radius !important;
+    border-radius: $radius !important;
+}
+
+//Estilos 
+
+ion-menu .menu-enabled, 
+ion-menu.menu-lateral,
+ion-menu .content {
+    @include degrade(#fc6e6f, #fb2b98);
+}
+
+ion-menu ion-content h3 {
+    color: $color-white;
+}
+
+ion-menu .list .item {
+    background: transparent;
+    color: $color-white;
+}
+
+//navbar
+ion-navbar{
+    height: 70px;
+}
+ion-navbar img {
+    max-width: 100%;
+}
+.cart {
+position: relative;
+right: 5%;
+}
+
+.cont {
+position: absolute;
+top: 18px;
+right: 0px;
+width: 15px;
+height: 15px;
+padding-right: 4px; 
+background-color: #b90505;
+color: $color-white;
+border-radius: 80%;
+font-size: 1rem;
+}
+//h3
+ion-header h3 {
+    margin-top: 0.5em;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $color-white;
+}
+//btn voltar
+.voltar {
+    width: 30%;
+}
+//buttons
+.alert-ios .alert-button {
+    color: #464545;
+    background-color: transparent;
+  }
+//cart
+.icon-cart {
+    color: $color-white;
+    font-size:2.5rem;
+    font-weight: bold;
+}
+
+//label
+ion-label {
+    white-space: normal !important;
+}
+
+//clear
+
+.clear{
+    clear: both;
+}
+
+//magin
+
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+.margin-bottom-70 {
+    margin-bottom: 70px;
+}
+
+.margin-bottom-130 {
+    margin-bottom: 130px;
+}
+
+.mais-menos{
+    max-width: 20px !important;
+}
+
+.alert-ios .alert-wrapper {
+    color: rgb(92, 91, 91) !important;
+    background: #ffffff !important;
+}

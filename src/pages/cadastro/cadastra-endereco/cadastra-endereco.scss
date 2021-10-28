@@ -1,0 +1,134 @@
+@import 'app/app.scss';
+page-cadastra-endereco {
+    .content {
+        margin-top: 0;
+    }
+    .cadastra_endereco_header {
+        @include degrade(#5041fc, #3f34c0);
+    }
+    .cadastra_endereco_header h3 {
+        margin-top: 35px;
+        color: #ffffff;
+        font-size: 1.5rem;
+    }
+    .cadastra_endereco,
+        ion-label {
+        color: #292d96;
+    }
+    #loginFacebook {
+        width: 240px;
+        margin-top: 180px;
+    } 
+    
+    // CEP
+    .busca {
+        position: relative;
+    }
+    .busca ion-label {
+        width: 10%;
+        position: absolute;
+        top: 9px;
+        left: 53px;
+        z-index: 99999; //border-right: 1px solid #CCCCCC; 
+        //padding-right: 15px;
+        margin-right: 0;
+        margin-left: -5px;
+        }
+        ion-searchbar {
+        width: 80%;
+        float: right;
+        margin-right: 35px;
+        -webkit-box-shadow: 0px 2px 3px 0px rgba(204, 204, 204, 1);
+        -moz-box-shadow: 0px 2px 3px 0px rgba(204, 204, 204, 1);
+        box-shadow: 0px 2px 3px 0px rgba(204, 204, 204, 1);
+        border: 1px solid #CCCCCC !important;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        padding-right: 50px;
+    }
+    .searchbar-ios.searchbar-left-aligned .searchbar-input {
+        padding-left: 0;
+    }
+    .label-ios + ion-input .text-input {
+        margin-left:5px;
+    }
+    .label-ios {
+        margin: 10px 8px 11px 0;
+    }
+    .searchbar-search-icon {
+        display: none;
+    }
+    .searchbar-input-container {
+        margin-left: 45px;
+    }
+    .searchbar-ios {
+        background: none !important;
+    } 
+    // Fim CEP
+
+    .formCadastro {
+        width: 270px;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    ion-grid,
+    ion-row,
+    ion-col {
+        padding-left: 0 !important;
+    }
+    .grid {
+        padding: 0 !important;
+    }
+    ion-col ion-item,
+    ion-col div {
+        max-width: 100%;
+    }
+    .iconesForm {
+        width: 270px;
+        height: 25px;
+        border: 1px solid #CCCCCC;
+        -webkit-box-shadow: 0px 2px 3px 0px rgba(204, 204, 204, 1);
+        -moz-box-shadow: 0px 2px 3px 0px rgba(204, 204, 204, 1);
+        box-shadow: 0px 2px 3px 0px rgba(204, 204, 204, 1);
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    ion-label img {
+        max-height: 30px;
+        max-width: 23px;
+        margin-right: 0;
+    }
+    ion-col img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+    ion-label .img-endereco {
+        max-width: 70%;
+    }
+    ion-col img.img-trabalho {
+        max-height: 87%;
+        max-width: 87%;
+    }
+    ion-input,
+    ion-search {
+        font-size: 1.3rem;
+    }
+    .label {
+        font-size: 1.5rem;
+    }
+
+    .item-ios.item-block .item-inner {
+        border: 0;
+    }
+    .btCriarConta {
+        background-color: white;
+        margin-bottom: -20px;
+    }
+    #criarConta {
+        width: 200px;
+    }
+    .escolha {
+        color: #4e43f9;
+        font-weight: bold;
+    }
+}
